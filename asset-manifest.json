@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ezmoney/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/ezmoney/static/js/main.13d2eb4a.chunk.js",
-    "main.js.map": "/ezmoney/static/js/main.13d2eb4a.chunk.js.map",
+    "main.js": "/ezmoney/static/js/main.3f0e8355.chunk.js",
+    "main.js.map": "/ezmoney/static/js/main.3f0e8355.chunk.js.map",
     "runtime-main.js": "/ezmoney/static/js/runtime-main.20191adf.js",
     "runtime-main.js.map": "/ezmoney/static/js/runtime-main.20191adf.js.map",
     "static/js/2.a8441b02.chunk.js": "/ezmoney/static/js/2.a8441b02.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.20191adf.js",
     "static/js/2.a8441b02.chunk.js",
     "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.13d2eb4a.chunk.js"
+    "static/js/main.3f0e8355.chunk.js"
   ]
 }
