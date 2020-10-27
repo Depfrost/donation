@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ezmoney/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/ezmoney/static/js/main.13d2eb4a.chunk.js",
+    "main.js.map": "/ezmoney/static/js/main.13d2eb4a.chunk.js.map",
+    "runtime-main.js": "/ezmoney/static/js/runtime-main.20191adf.js",
+    "runtime-main.js.map": "/ezmoney/static/js/runtime-main.20191adf.js.map",
+    "static/js/2.a8441b02.chunk.js": "/ezmoney/static/js/2.a8441b02.chunk.js",
+    "static/js/2.a8441b02.chunk.js.map": "/ezmoney/static/js/2.a8441b02.chunk.js.map",
+    "static/js/3.f60460e2.chunk.js": "/ezmoney/static/js/3.f60460e2.chunk.js",
+    "static/js/3.f60460e2.chunk.js.map": "/ezmoney/static/js/3.f60460e2.chunk.js.map",
+    "index.html": "/ezmoney/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/ezmoney/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.a8441b02.chunk.js.LICENSE.txt": "/ezmoney/static/js/2.a8441b02.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/ezmoney/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20191adf.js",
+    "static/js/2.a8441b02.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.13d2eb4a.chunk.js"
+  ]
+}
