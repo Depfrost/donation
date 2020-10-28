@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/ezmoney/static/css/main.bb7996ab.chunk.css",
-    "main.js": "/ezmoney/static/js/main.46704233.chunk.js",
-    "main.js.map": "/ezmoney/static/js/main.46704233.chunk.js.map",
+    "main.js": "/ezmoney/static/js/main.890d0bb0.chunk.js",
+    "main.js.map": "/ezmoney/static/js/main.890d0bb0.chunk.js.map",
     "runtime-main.js": "/ezmoney/static/js/runtime-main.3353c89c.js",
     "runtime-main.js.map": "/ezmoney/static/js/runtime-main.3353c89c.js.map",
-    "static/js/2.a8df134d.chunk.js": "/ezmoney/static/js/2.a8df134d.chunk.js",
-    "static/js/2.a8df134d.chunk.js.map": "/ezmoney/static/js/2.a8df134d.chunk.js.map",
+    "static/js/2.a08896fd.chunk.js": "/ezmoney/static/js/2.a08896fd.chunk.js",
+    "static/js/2.a08896fd.chunk.js.map": "/ezmoney/static/js/2.a08896fd.chunk.js.map",
     "index.html": "/ezmoney/index.html",
     "static/css/main.bb7996ab.chunk.css.map": "/ezmoney/static/css/main.bb7996ab.chunk.css.map",
-    "static/js/2.a8df134d.chunk.js.LICENSE.txt": "/ezmoney/static/js/2.a8df134d.chunk.js.LICENSE.txt"
+    "static/js/2.a08896fd.chunk.js.LICENSE.txt": "/ezmoney/static/js/2.a08896fd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3353c89c.js",
-    "static/js/2.a8df134d.chunk.js",
+    "static/js/2.a08896fd.chunk.js",
     "static/css/main.bb7996ab.chunk.css",
-    "static/js/main.46704233.chunk.js"
+    "static/js/main.890d0bb0.chunk.js"
   ]
 }
