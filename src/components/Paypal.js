@@ -39,7 +39,6 @@ function Paypal() {
                 style={paypalButtonStyle}
                 amount={price}
                 onSuccess={(details, data) => {
-                alert("Transaction completed by " + details.payer.name.given_name);
                 setPaidFor(true);
                 }}
                 options={{
