@@ -1,76 +1,85 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
+import { PayPalButton } from "react-paypal-button-v2";
+import CurrencyInput from 'react-currency-input-field';
 
 function Paypal() {
-    const product = {
-        price: 50.00,
-        name: 'Donation',
-        description: 'A generous donation'
-    };
     const [paidFor, setPaidFor] = useState(false);
-    const [error, setError] = useState(null);
-    const paypalRef = useRef();
-
-    useEffect(() => {
-        window.paypal
-        .Buttons({
-            createOrder: (data, actions) => {
-                return actions.order.create({
-                    purchase_units: [
-                    {
-                        description: product.description,
-                        amount: {
-                        currency_code: 'EUR',
-                        value: product.price,
-                        },
-                    },
-                    ],
-                });
-            },
-            onApprove: async (data, actions) => {
-                const order = await actions.order.capture();
-                setPaidFor(true);
-                console.log(order);
-            },
-            onError: err => {
-                setError(err);
-                console.error(err);
-            },
-        })
-        .render(paypalRef.current);
-    }, [product.description, product.price]);
+    const [price, setPrice] = useState(1);
 
     if (paidFor) {
         return (
-        <div>
-            <h1>Thank you so much for your generous donation! &lt;3</h1>
+        <div style={{display:"flex",height:"100%", justifyContent:"center", alignItems:"center"}}>
+            <h1 style={{textAlign:"center"}}>Thank you so much for your generous donation !!! <br/> &lt;3</h1>
         </div>
         );
     }
 
     return (
-        <div style={{height:"100%",display: "flex", alignItems:"stretch", flexDirection:"column"}}>
-            {error && <div>Uh oh, an error occurred! {error.message}</div>}
-            <div style={{display: "flex", justifyContent:"center", alignItems:"center", flexDirection:"column", flexGrow:"2"}}>
-                <h2 style={textStyle}>Make a donation of</h2>
-                <p/>
-                <input style={inputStyle}/>
-                <p/>
-                <h2 style={textStyle}>&euro;</h2>
+        <div style={parentDivStyle}>
+            <div style={childrenDivStyle}>
+                <h2>Make a donation of</h2>
+                <div style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"space-around"}}>
+                    <CurrencyInput
+                        style={inputStyle}
+                        id="input-example"
+                        name="input-name"
+                        placeholder="1.00"
+                        defaultValue={price}
+                        allowDecimals={true}
+                        decimalsLimit={2}
+                        allowNegativeValue={false}
+                        groupSeparator=" "
+                        decimalSeparator="."
+                        onChange={(value, name) => {value ? setPrice(value) : setPrice(1)}}
+                    />
+                    <h2>&euro;</h2>
+                </div>
             </div>
-            <div style={buttonDivStyle} ref={paypalRef} />
+            <PayPalButton
+                style={paypalButtonStyle}
+                amount={price}
+                onSuccess={(details, data) => {
+                alert("Transaction completed by " + details.payer.name.given_name);
+                setPaidFor(true);
+                }}
+                options={{
+                    clientId: "AUc6kvunomoWXCO8fVoYsSeocv13aAm3W7BkG_2xqD-5V2vyH5uUlaFjxpnw-18KkbIb4PXRqJViryXR",
+                    currency:"EUR"
+                }}
+            />
         </div>
     );
 }
 
-const textStyle = {
+const paypalButtonStyle = {
+    alignSelf:"center"
+}
+
+const parentDivStyle = {
+    height:"100%",
+    display: "flex",
+    alignItems:"center",
+    flexDirection:"column"
+}
+
+const childrenDivStyle = {
+    display: "flex",
+    justifyContent:"center",
+    alignItems:"center",
+    flexDirection:"column",
+    flexGrow:"1"
 }
 
 const inputStyle = {
-}
-
-const buttonDivStyle = {
-    flexGrow:"1",
-    alignSelf:"center"
+    fontSize: "10px",
+    fontWeight: "bold",
+    textAlign:"center",
+    padding: "12px 20px",
+    margin: "8px 0",
+    display: "inline-block",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    boxSizing: "border-box",
 }
 
 export default Paypal;

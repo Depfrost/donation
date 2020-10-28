@@ -28,7 +28,7 @@ function Popup() {
     } else {
         return(
             <div style={popupStyle}>
-                <div className="container">
+                <div className="container" onClick={() => setDonating(true)}>
                     <img className="centered" src="https://img.icons8.com/cotton/2x/like.png"
                         onClick={() => setDonating(true)} alt=""/>
                     <h2 className="centered text">Donate</h2>
