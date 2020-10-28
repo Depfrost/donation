@@ -42,7 +42,7 @@ function Paypal() {
                 setPaidFor(true);
                 }}
                 options={{
-                    clientId: "AUc6kvunomoWXCO8fVoYsSeocv13aAm3W7BkG_2xqD-5V2vyH5uUlaFjxpnw-18KkbIb4PXRqJViryXR",
+                    clientId: "AYVN9YJTNRI6tDRQBGkyyU82wJFRZLLFVKmdUNhNlti4UOpDPMxjY8f5sg-anqn_vNhBUh9QvD85zCbF",
                     currency:"EUR"
                 }}
             />
