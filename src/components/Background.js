@@ -5,17 +5,17 @@ const backgroundImages = [
 
 function Background() {
   return (
-      backgroundImages.map((url, index) => (
-        <img style={getBackgroundStyle()} key={index} src={url} alt=""/>
-      ))
-    );
+    backgroundImages.map((url, index) => (
+      <img style={getBackgroundStyle()} key={index} src={url} alt=""/>
+    ))
+  );
 }
 
 const getBackgroundStyle = () => {
   return {
-      float: "left",
-      width: "100%",
-      height: "100%"
+    float: "left",
+    width: "100%",
+    height: "100%"
   }
 };
 
