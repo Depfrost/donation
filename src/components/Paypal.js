@@ -37,13 +37,14 @@ function Paypal() {
             </div>
             <PayPalButton
                 style={paypalButtonStyle}
+                enableStandardCardFields={false}
                 amount={price}
                 onSuccess={(details, data) => {
                 setPaidFor(true);
                 }}
                 options={{
                     clientId: "AYVN9YJTNRI6tDRQBGkyyU82wJFRZLLFVKmdUNhNlti4UOpDPMxjY8f5sg-anqn_vNhBUh9QvD85zCbF",
-                    currency:"EUR"
+                    currency:"EUR",
                 }}
             />
         </div>
@@ -51,7 +52,7 @@ function Paypal() {
 }
 
 const paypalButtonStyle = {
-    alignSelf:"center"
+    alignSelf:"center",
 }
 
 const parentDivStyle = {

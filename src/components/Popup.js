@@ -1,23 +1,8 @@
 import { useState } from "react";
-import './Popup.css';
 import Paypal from "./Paypal";
 
 function Popup() {
     const [donating, setDonating] = useState(false);
-    const popupStyle = {
-        minWidth: "285px",
-        minHeight: "300px",
-        width: "15%",
-        height: "45%",
-        backgroundColor: "white",
-        borderRadius: "25px",
-        filter: "drop-shadow(0 0 30px #333)",
-        position: "fixed",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        border: "3px solid grey",
-    }
 
     if (donating) {
         return (
@@ -27,15 +12,42 @@ function Popup() {
         );
     } else {
         return(
-            <div style={popupStyle}>
-                <div className="container" onClick={() => setDonating(true)}>
-                    <img className="centered" src="https://img.icons8.com/cotton/2x/like.png"
-                        onClick={() => setDonating(true)} alt=""/>
-                    <h2 className="centered text">Donate</h2>
-                </div>
+            <div style={containerStyle} onClick={() => setDonating(true)}>
+                <img src="https://img.icons8.com/cotton/2x/like.png"
+                    onClick={() => setDonating(true)} alt=""/>
+                <h2 style={textStyle}>Donate</h2>
             </div>
         );
     }
+}
+
+const popupStyle = {
+    padding:"40px",
+    backgroundColor: "white",
+    borderRadius: "25px",
+    filter: "drop-shadow(0 0 30px #333)",
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    border: "3px solid grey",
+    maxHeight: "100vh",
+}
+
+const containerStyle = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+}
+
+const textStyle = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    color: "rgb(68, 75, 85)",
+    pointerEvents: "none",
+    transform: "translate(-50%, -90%)",
 }
 
 export default Popup;
