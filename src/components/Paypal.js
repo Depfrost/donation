@@ -39,6 +39,7 @@ function Paypal() {
             <PayPalButton
                 enableStandardCardFields={true}
                 amount={price}
+                shippingPreference="NO_SHIPPING"
                 onSuccess={(details, data) => {
                 setPaidFor(true);
                 }}
