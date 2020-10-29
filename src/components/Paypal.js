@@ -32,7 +32,7 @@ function Paypal() {
                         decimalSeparator="."
                         onChange={(value, name) => {value ? setPrice(value) : setPrice(1)}}
                     />
-                    <h2>&euro;</h2>
+                    <h2 style={{paddingLeft:"10px"}}>&euro;</h2>
                 </div>
             </div>
             <div style={paypalDivStyle}>
@@ -74,7 +74,6 @@ const childrenDivStyle = {
 
 const inputStyle = {
     fontSize: "18px",
-    width:"195px",
     fontWeight: "bold",
     textAlign:"center",
     padding: "8px 20px",
