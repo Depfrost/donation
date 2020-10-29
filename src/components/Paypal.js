@@ -18,7 +18,7 @@ function Paypal() {
         <div style={parentDivStyle}>
             <div style={childrenDivStyle}>
                 <h2>Make a donation of</h2>
-                <div style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"space-around"}}>
+                <div style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                     <CurrencyInput
                         style={inputStyle}
                         id="input-example"
@@ -35,9 +35,9 @@ function Paypal() {
                     <h2>&euro;</h2>
                 </div>
             </div>
+            <div style={paypalDivStyle}>
             <PayPalButton
-                style={paypalButtonStyle}
-                enableStandardCardFields={false}
+                enableStandardCardFields={true}
                 amount={price}
                 onSuccess={(details, data) => {
                 setPaidFor(true);
@@ -47,18 +47,19 @@ function Paypal() {
                     currency:"EUR",
                 }}
             />
+            </div>
         </div>
     );
 }
 
-const paypalButtonStyle = {
-    alignSelf:"center",
+const paypalDivStyle = {
+    alignSelf:"stretch",
 }
 
 const parentDivStyle = {
     height:"100%",
     display: "flex",
-    alignItems:"center",
+    alignItems:"stretch",
     flexDirection:"column"
 }
 
@@ -71,10 +72,11 @@ const childrenDivStyle = {
 }
 
 const inputStyle = {
-    fontSize: "10px",
+    fontSize: "18px",
+    width:"195px",
     fontWeight: "bold",
     textAlign:"center",
-    padding: "12px 20px",
+    padding: "8px 20px",
     margin: "8px 0",
     display: "inline-block",
     border: "1px solid #ccc",
